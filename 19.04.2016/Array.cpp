@@ -14,6 +14,7 @@ int Array::TheElement(int num) //???????????????????????????????????????????????
 {
 	int key;
 	key = num;
+	return key;
 }
 
 Array::Array(int* x, int n)
@@ -108,7 +109,7 @@ void Array::QuickSort( int left, int right)
 		while (a[j]>m) j--;
 		if (i <= j)
 		{
-			Swap(a + i, a + j);
+			Swap(a[i], a[j]);
 			i++;
 			j--;
 		}
@@ -176,6 +177,7 @@ int Array::FindMin()
 	for (int i = 1; i < size; i++)
 	if (a[i] < a[min])
 		min = i;
+	return min;
 }
 int Array::FindMax()
 {
@@ -183,6 +185,7 @@ int Array::FindMax()
 	for (int i = 1; i < size; i++)
 	if (a[i] >= a[max])
 		max = i;
+	return max;
 }
 
 void Array::DisplayArray()
